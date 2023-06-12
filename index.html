@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>carte de réservation</title>
+</head>
+
+<body>
+    <header class="menu">
+        <div id="grid-container">
+            <div id= "grid-item">
+                <div class="logo">
+                    <img src="images/logo/logo.png" style="max-width: 50%"  alt="logo">
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <section>
+        <div class="stepsslider">
+            <div class="step">
+                <h2>
+                    Utilisez le slider pour connaitre les étapes à effectuer pour louer un vélo.
+                </h2>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class = "section_slider">
+   
+            <div class="slide_information">
+                <img id="mySlideun" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slidebienvenu" style="width:100%">
+
+                <div id="firstp"> 
+                    <p></p>
+                </div> 
+                <h3>buttonslide</h3>
+                <div class="left">
+                    <button id="buttonleft"><i class="fas fa-angle-left"></i></button>
+                </div>
+
+                <div class="right">
+                    <button id="buttonright"><i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+            <div id ="keyboardmybutton">
+                <button id="left-btn">&larr;</button>
+                <button id="right-btn">&rarr;</button>                  
+            </div>
+
+    </section>
+
+
+    <div class="maincontainer">
+                   
+        <div id="map"></div>
+
+                   
+            
+        <div id ="itemform"> 
+            <aside id="content">
+                <h3>Détails de la station</h3>
+                <p>STATUT</p>
+                <div id="stationstatus">
+                </div>
+                <p>NOM<p>
+                <div id="name">
+                </div>
+                <p>ADRESSE</p>
+                <div id="adress">
+                </div>
+                <p>BORNES DE VELO</p>
+                <div id="bikesstands">
+                </div>
+                <p>BORNES DE VELOS DISPONIBLES</p>
+                <div id="availablebikesstands">
+                </div>
+                <p>NOMBRE DE VELOS DISPONIBLES</p>
+                <div id="availablebikes">
+                </div>
+                <div id="buttonbooking">
+                    <button type="button" id="booking" value="envoyer">Réserver</button>
+                </div>
+
+                <div id="message"></div>
+
+                <div id="contact">
+                    <form>
+                        <div id="contactInformation">
+                            <p>Réservation</p>
+                            <p>Veuillez saisir les champs ci-dessous pour réserver votre Vélib à la station</p>
+                            <label for='surname'>NOM</label>
+                            <input id="surname" type="text" name="surname" placeholder="Nom">
+                            <label for='firstName'>PRENOM</label>
+                            <input id="firstName" type="text" name="name" placeholder="Prénom" >
+                            <label for='phonenumber'>TELEPHONE</label>
+                            <input id="phonenumber" type="text" name="tel-national" placeholder="Téléphone" >
+                            <p>signature</p> 
+                            <canvas id="draw" width="200" height="200"></canvas>
+                            <div id="buttonsofthebooking">
+                                <input type="button" id="clear" value="Effacer">
+                                <input type="button" id="mybutton" value="Envoyer">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+            </aside>
+        </div>
+    </div>
+ 
+    <footer>
+ 
+            <div class="customerbooking">
+                <div id="text">
+                </div>
+                <h3 id="timer">
+                    Votre réservation se terminera dans <span id="compteur"></span>
+                </h3>
+                <div id="titleCanceled"></div>
+                <input type="button" id="cancel" value="Annuler la réservation">
+            </div>
+            <div id = "clearthebooking"> </div>
+ 
+    
+    </footer>
+
+        <!-- Chargement des fichiers js après le DOM -->
+        <script src="script/map.js"></script>
+        <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA83Y1wGEAadM3yqG0IDJu0fIhXi3c8uQc&callback=initMap">
+        </script>
+        <script src="script/ajax.js"></script>
+        <script src="script/slider.js"></script>
+        
+        <script src="script/markers.js"></script>
+        <script src="script/form.js"></script>
+        <script src="script/compteur.js"></script>
+        
+        <script src="script/markerclusterer.js"></script>
+        <script src="script/canvas.js"></script>
+
+</body>
+
+</html>

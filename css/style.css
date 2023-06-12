@@ -1,0 +1,442 @@
+/* 1ere Partie */
+
+body 
+{
+    font-family: 'Roboto';
+}
+/*La barre de menu*/
+#grid-container 
+{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:auto;
+    height: 150px;
+}
+
+@media (max-width: 400px)
+    {
+        #grid-container 
+            {
+                height: 100px;  
+            }
+    }
+
+
+
+#grid-item
+    {
+        display: inline-grid;
+        text-align: center;
+    }
+
+
+/*Le container du texte en dessous de la barre de menu*/
+
+/*Il est supprimé en version mobile*/
+@media (max-width: 600px)
+    {
+        .stepsslider
+            {
+                display: none;
+            }
+    }
+
+/*Le texte en dessous de la barre de menu*/
+.step
+    {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+
+
+
+/*SLIDER Partie */
+
+/*Les boutons du slider*/
+.left
+    {
+        position: absolute;
+        bottom: 50%;
+    }
+
+#buttonleft
+    {
+        color: black;
+        font-size: 70px;
+
+    }
+
+    @media (max-width: 500px)
+    {
+
+        #buttonleft
+            {
+                font-size: 30px;
+            }
+    }
+
+        @media (min-width: 1800px)
+    {
+
+        #buttonleft
+            {
+                font-size: 150px;
+            }
+    }
+
+.right
+    {
+        position: absolute;
+        right: 0px;
+        bottom: 50%;
+    }
+
+#buttonright
+    {
+        color: black;
+        font-size: 70px;   
+    }
+
+        @media (max-width: 500px)
+    {
+
+        #buttonright
+            {
+                font-size: 30px;
+            }
+    }
+
+    @media (min-width: 1800px)
+    {
+
+        #buttonright
+            {
+                font-size: 150px;
+            }
+    }
+/* Les boutons du clavier */
+#left-btn
+{
+    font-size: 30px;  
+}
+
+#right-btn
+{
+    font-size: 30px;     
+}
+#keyboardmybutton
+{
+    display: flex;
+    justify-content: center;
+}
+
+.red 
+{
+    color : red;
+}
+.green
+{
+    color: green;
+}
+.black
+{
+    color: black;
+}
+
+/*Slider*/
+
+/*Le texte du slide*/
+#firstp
+    {
+        position: absolute;
+        bottom: 2%;
+        color: yellow;
+        text-align: center;
+        width: 98%;
+        left: 1%;
+        font-size: 0.8em;
+        background-color: grey;
+        opacity: 0.7;
+    }
+
+.slide_information
+    {
+        position: relative;
+    }
+
+/*Medias queries le texte du slide*/
+
+@media (min-width: 1501px)
+    {
+
+        #firstp
+            {
+                font-size: 3.5em;
+            }
+    }
+
+  
+@media (min-width: 1060px) and (max-width: 1500px)
+    {
+
+        #firstp
+            {
+                font-size: 2.5em;
+            }
+    }
+    
+@media (min-width: 900px) and (max-width: 1059px)
+    {
+
+        #firstp
+            {
+                font-size: 2.0em;
+            }
+    }
+
+    @media (min-width: 560px) and (max-width: 899px)
+    {
+
+        #firstp
+            {
+                font-size: 1.3em;
+            }
+    }
+
+
+.slide_information h3
+{
+    display: none;
+}
+
+
+
+
+
+/*2eme Partie */
+
+#map
+    {   
+        width: 100%;
+        height: 1104px;
+        position: relative;
+    }
+
+#content 
+    {
+        display: none;
+        width: 100%;
+        height: 1104px;
+        display: inline-flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+#contact 
+    {
+        display: none;
+    }
+
+
+#draw 
+    {
+        display: inline-flex;
+        border: 2px solid black;
+        justify-content: center;
+    }
+
+.maincontainer 
+    {
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+    }
+
+@media all and (max-width: 800px) 
+{
+    .maincontainer 
+    {
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+    }
+ #itemform 
+    {
+       display: inline-flex;
+       flex-direction: column;
+       width: 100%;
+    }
+}
+
+#contact
+    {
+        display: none;
+    }
+
+#buttonbooking
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+#timer
+    {
+        display: none;
+    }
+
+#itemform
+    {
+        display: none;
+        background-color: #cccbcb;
+    }
+
+
+#stationstatus
+    {
+        color: blue;
+        font-weight: bold;
+    }
+
+#name
+    {
+        color: blue;
+        font-weight: bold;
+    }
+
+#adress
+    {
+        color: blue;
+        font-weight: bold;   
+    }
+
+#bikesstands
+    {
+        color: blue;
+        font-weight: bold;   
+    }
+
+#availablebikesstands
+    {
+        color: blue;
+        font-weight: bold;    
+    }
+
+#availablebikes
+    {
+        color: blue;
+        font-weight: bold;    
+    }
+
+#booking
+    {
+        padding: 5px 10px 5px 10px;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: #80bd80;
+        color: white;
+    }
+
+#clear
+    {
+        padding: 5px 10px 5px 10px;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: red; 
+        color: white;
+    }
+
+#mybutton
+    {
+        padding: 5px 10px 5px 10px;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: #2161b8;
+        color: white;
+    }
+
+#surname
+    {
+        text-align: center;
+    }
+
+#firstName
+    {
+        text-align: center;   
+    }
+
+#phonenumber
+    {
+        text-align: center;   
+    }
+
+#contactInformation
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+/*Les boutons valider la réservation et effacer le canvas*/
+#buttonsofthebooking
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+#message
+    {
+        font-weight: bold;
+        color: red;
+    }
+
+
+ 
+
+/* 3eme Partie*/
+
+/*Le message réservation annulée*/
+#clearthebooking
+    {
+        color: red;
+        text-align: center;
+    }
+
+#text
+    {
+        display: none;
+        text-align: center;
+        font-weight: bold;
+        color: red;
+    }
+
+#cancel
+    {
+        padding: 5px 10px 5px 10px;
+        font-weight: bold;
+        font-size: 13px;
+        background-color: red; 
+        color: white;
+        display: none;
+    }
+
+.customerbooking
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+#compteur
+    {
+        display: block;
+    }
+
+/*Réservation terminée*/
+#titleCanceled
+    {
+        display: none;
+        color: red;
+    }
+
